@@ -28,7 +28,7 @@ pipeline{
                always{
                       echo'always called'
                }
-               sucess{
+               success{
                       echo'Sucess Called'                     
                }
                failure{
