@@ -1,10 +1,10 @@
 pipeline{
           agent any
           stages{
-				   stage('Clone git repo'){
+				stage('Clone git repo'){
                     steps{
                           echo 'Clone git repo'
-						             bat 'git clone https://github.com/venupall/VenuPipelineRepo.git '
+						  bat 'git clone https://github.com/venupall/VenuPipelineRepo.git '
                         }
                 }
                 stage('Compile'){
@@ -34,4 +34,5 @@ pipeline{
                failure{
                       echo'failure called'
                }
+            }
 }
