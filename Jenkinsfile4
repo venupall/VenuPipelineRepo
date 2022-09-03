@@ -1,0 +1,37 @@
+pipeline{
+          agent any
+          stages{
+				   stage('Clone git repo'){
+                    steps{
+                          echo 'Clone git repo'
+						             bat 'git clone https://github.com/venupall/VenuPipelineRepo.git '
+                        }
+                }
+                stage('Compile'){
+                    steps{
+                          echo 'Compile'
+						  bat 
+                        }
+                }
+				stage('Test'){
+					steps{
+						  echo'Test'
+				    }
+				}
+				stage('Deploy'){
+					steps{
+						  echo'Deploy'
+					}
+				}
+          }
+          post{
+               always{
+                      echo'always called'
+               }
+               sucess{
+                      echo'Sucess Called'                     
+               }
+               failure{
+                      echo'failure called'
+               }
+}
