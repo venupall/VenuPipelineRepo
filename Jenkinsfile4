@@ -25,13 +25,13 @@ pipeline{
           }
           post{
                always{
-                      echo'always called'
+                      echo'Always called'
                }
                success{
                       echo'Sucess Called'                     
                }
                failure{
-                      echo'failure called'
+                      echo'Failure Called'
                }
             }
 }
